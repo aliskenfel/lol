@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', verdana,tahoma, sans-serif;
+}
+body{
+    height: 120vh;
+    width: 100%;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    background-color: rgb(14, 14, 14);
+    background-image: url(space-hill.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Set the background color without transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: moveDots 1.5s ease-in-out infinite;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.75s; /* Delay for the second dot */
+}
+
+@keyframes moveDots {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px); /* Adjust the distance between dots */
+    }
+}
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px; /* Initial height */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    transition: top 0.5s ease, height 0.5s ease, border-radius 1s ease, padding 0.5s ease, background-color 0.5s ease;
+    backdrop-filter: blur(10px); /* Adjust the blur value as needed for the glassy effect */
+}
+
+.container.island {
+    top: 10px; /* Adjust the top spacing as needed */
+    height: 50px; /* Height when it becomes an island */
+    border-radius: 40px; /* Adjust the radius as needed */
+    padding: 10px 20px; /* Adjust the padding for stretching and moving away from the sides */
+    backdrop-filter: blur(20px); /* Adjust the blur value as needed for the glassy effect */
+    transition: top 0.5s ease, height 0.5s ease, border-radius 0.5s ease, padding 0.5s ease, background-color 0.5s ease, backdrop-filter 0.5s ease;
+}
+
+
+.logo {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+     margin-right: 15px;
+}
+.navbar ul li:last-child{
+    margin-right: 5; /* Remove margin from the last element to prevent extra space */
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #66ccff; /* Set the underline color */
+    transition: width 0.3s ease; /* Adjust the transition duration and easing as needed */
+}
+
+.navbar ul li a:hover::before {
+    width: 100%;
+}
+
+
+.middle {
+    margin: 30px;
+    margin-top: 29vh;
+    color: rgb(201, 201, 201);
+}
+
+.middle h1 {
+    font-size: 60px;
+}
+
+.button {
+    color: whitesmoke;
+    background-color: blueviolet;
+    font-size: 25px;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+    width: 15px;
+
+}
+::-webkit-scrollbar-track{
+    background-color: #000000;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#642bff, #ff22e6);
+    border-radius: 10px;
+}
